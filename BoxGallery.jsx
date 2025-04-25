@@ -1,3 +1,4 @@
+
 import React from "react";
 
 const BoxGallery = () => {
@@ -8,20 +9,23 @@ const BoxGallery = () => {
       description: "A clean and modern CV template with sleek design.",
       imageUrl: "/Resumes/resume1.png",
       fileUrl: "/Resumes/resume1.docx",
+      viewUrl:"/Resumes/resume1.",
     },
     {
       id: 2,
       title: "Professional CV",
       description: "Best for job seekers in corporate fields.",
       imageUrl: "/Resumes/resume2.png",
-      fileUrl: "/resumes//resume2.docx",
+      fileUrl: "/resumes/resume2.docx",
+    viewUrl:"/Resumes/resume2.",
     },
     {
       id: 3,
       title: "Creative CV",
       description: "Great for designers and creatives to showcase work.",
       imageUrl: "/Resumes/resume3.png",
-      fileUrl: "/resumes//resume3.docx",
+      fileUrl: "/resumes/resume3.docx",
+      viewUrl:"/Resumes/resume3.",
     },
     {
         id: 4,
@@ -29,6 +33,7 @@ const BoxGallery = () => {
         description: "A clean and modern CV template with sleek design.",
         imageUrl:"/Resumes/resume4.png",
         fileUrl: "/resumes/resume4.docx",
+         viewUrl:"/Resumes/resume4",
       },
       {
         id: 5,
@@ -36,6 +41,7 @@ const BoxGallery = () => {
         description: "A clean and modern CV template with sleek design.",
         imageUrl:"/Resumes/resume5.png",
         fileUrl: "/resumes/resume5.docx",
+         viewUrl:"/Resumes/resume5",
       },
       {
         id: 6,
@@ -43,6 +49,7 @@ const BoxGallery = () => {
         description: "A clean and modern CV template with sleek design.",
         imageUrl: "/Resumes/resume6.png",
         fileUrl: "/resumes/resume6.docx",
+         viewUrl:"/Resumes/resume6",
       },
       {
         id: 7,
@@ -50,6 +57,7 @@ const BoxGallery = () => {
         description: "A clean and modern CV template with sleek design.",
         imageUrl:"/Resumes/resume7.png",
         fileUrl: "/resumes/resume7.docx",
+          viewUrl:"/Resumes/resume7",
       },
       {
         id: 8,
@@ -57,6 +65,7 @@ const BoxGallery = () => {
         description: "A clean and modern CV template with sleek design.",
         imageUrl:"/Resumes/resume8.png",
         fileUrl: "/resumes/resume8.docx",
+          viewUrl:"/Resumes/resume8",
       },
       {
         id: 9,
@@ -64,6 +73,7 @@ const BoxGallery = () => {
         description: "A clean and modern CV template with sleek design.",
         imageUrl: "/Resumes/resume9.png",
         fileUrl: "/resumes/resume9.docx",
+        viewUrl:"/Resumes/resume9",
       },
       {
         id: 10,
@@ -71,6 +81,8 @@ const BoxGallery = () => {
         description: "A clean and modern CV template with sleek design.",
         imageUrl: "/Resumes/resume10.png",
         fileUrl: "/resumes/resume10.docx",
+        viewUrl:"/Resumes/resume10",
+      
       },
       {
         id: 11,
@@ -78,6 +90,8 @@ const BoxGallery = () => {
         description: "A clean and modern CV template with sleek design.",
         imageUrl: "/Resumes/resume8.png",
         fileUrl: "/resumes/resume8.docx",
+        viewUrl:"/Resumes/resume8",
+
       },
       {
         id: 12,
@@ -85,6 +99,7 @@ const BoxGallery = () => {
         description: "A clean and modern CV template with sleek design.",
         imageUrl: "/Resumes/resume2.png",
         fileUrl: "/resumes/resume2.docx",
+        viewUrl:"/Resumes/resume2",
       },
       {
         id: 13,
@@ -92,6 +107,7 @@ const BoxGallery = () => {
         description: "A clean and modern CV template with sleek design.",
         imageUrl: "/Resumes/resume1.png",
         fileUrl: "/resumes/resume1.docx",
+        viewUrl:"/Resumes/resume1",
       },
   ];
 
@@ -114,14 +130,25 @@ const BoxGallery = () => {
                 <h2 className="text-lg font-semibold">{box.title}</h2>
                 <p className="text-sm text-gray-600">{box.description}</p>
               </div>
-              <a
-                href={box.fileUrl}
-                download
-                className="group mt-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex justify-center items-center gap-2 transition-all"
-              >
-                Download
-                <span className="transform group-hover:translate-x-1 transition-transform duration-200">⬇️</span>
-              </a>
+              <div className="flex gap-2 mt-2">
+  <a
+    href={box.imageUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex-1 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-center transition-all"
+  >
+    View
+  </a>
+  <a
+    href={box.fileUrl}
+    download
+    className="flex-1 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-center transition-all"
+  >
+    Download
+  </a>
+</div>
+
+
             </div>
           </div>
         ))}
@@ -131,5 +158,8 @@ const BoxGallery = () => {
 };
 
 export default BoxGallery;
+
+
+
 
 
